@@ -26,10 +26,10 @@ int main(){
     char empName[40];
     long int resize;
 
-    fp = fopen("EMP.DAT", "rb+");
+    fp = fopen("EMPLO.DAT", "rb+");
 
     if(fp == NULL){
-        fp = fopen("EMP.DAT", "wb+");
+        fp = fopen("EMPLO.DAT", "wb+");
         if(fp == NULL){
             printf("Cannot open file");
             exit(1);
@@ -142,9 +142,9 @@ int main(){
                     else printf("\nData successfully deleted...\n");
                     fclose(fp);
                     fclose(ft);
-                    remove("EMP.DAT");
-                    rename("Temp.dat", "EMP.DAT");
-                    fp = fopen("EMP.DAT", "rb+");
+                    remove("EMPLO.DAT");
+                    rename("Temp.dat", "EMPLO.DAT");
+                    fp = fopen("EMPLO.DAT", "rb+");
                     printf("\nDelete another record(y/n) ");
                     fflush(stdin);
                     another = getche();
